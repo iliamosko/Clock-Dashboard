@@ -18,13 +18,13 @@ const AnalogClock: React.FC<{ size?: number }> = ({ size = 300 }) => {
       const hourAngle = hours * 30 + minutes * 0.5 + seconds * (0.5 / 60)
 
       if (hourRef.current) {
-        hourRef.current.style.transform = `rotate(${hourAngle}deg)`
+        hourRef.current.style.transform = `rotate(${hourAngle - 90}deg)`
       }
       if (minuteRef.current) {
-        minuteRef.current.style.transform = `rotate(${minuteAngle}deg)`
+        minuteRef.current.style.transform = `rotate(${minuteAngle - 90}deg)`
       }
       if (secondRef.current) {
-        secondRef.current.style.transform = `rotate(${secondAngle}deg)`
+        secondRef.current.style.transform = `rotate(${secondAngle - 90}deg)`
       }
     }
 
