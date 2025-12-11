@@ -1,0 +1,6 @@
+create an app that will run on a 10 inch screen. This can be
+resizeable, so make sure it fits all sizes.
+
+I need to show on the left side an analog clock, and on the right the date.
+
+Remove all the fluff and unnecessary code that is created with the sample react app.
