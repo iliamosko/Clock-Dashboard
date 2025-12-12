@@ -26,6 +26,8 @@
 .left {
   align-items: center;
   justify-content: center;
+  border:#111 2px solid;
+  border-radius: 15px;
 }
 
 .right {
@@ -39,6 +41,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border:#111 2px solid;
+  border-radius: 15px;
   min-width: 0;
 }
 
