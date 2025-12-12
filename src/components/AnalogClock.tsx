@@ -34,9 +34,14 @@ const AnalogClock: React.FC<{ size?: number }> = ({ size = 300 }) => {
   }, [])
 
   return (
-    <div className="analog-wrapper" style={{ width: size, maxWidth: '100%' }}>
-      <svg viewBox="0 0 200 200" className="analog-clock" role="img" aria-label="Analog clock">
-        <circle cx="100" cy="100" r="95" className="clock-face" />
+    <div className='analog-wrapper' style={{ width: size, maxWidth: '100%' }}>
+      <svg
+        viewBox='0 0 200 200'
+        className='analog-clock'
+        role='img'
+        aria-label='Analog clock'
+      >
+        <circle cx='100' cy='100' r='95' className='clock-face' />
 
         {/* ticks and numeric labels */}
         {[...Array(12)].map((_, i) => {
@@ -57,18 +62,18 @@ const AnalogClock: React.FC<{ size?: number }> = ({ size = 300 }) => {
                 y1={y1}
                 x2={x2}
                 y2={y2}
-                stroke="#222"
+                stroke='#222'
                 strokeWidth={i % 3 === 0 ? 3 : 1.6}
-                strokeLinecap="round"
+                strokeLinecap='round'
               />
               <text
                 x={textX}
                 y={textY}
-                fill="#222"
-                fontSize="18"
+                fill='#222'
+                fontSize='18'
                 fontWeight={700}
-                textAnchor="middle"
-                dominantBaseline="middle"
+                textAnchor='middle'
+                dominantBaseline='middle'
               >
                 {number}
               </text>
@@ -79,46 +84,46 @@ const AnalogClock: React.FC<{ size?: number }> = ({ size = 300 }) => {
         {/* hour hand */}
         <line
           ref={hourRef}
-          x1="100"
-          y1="100"
-          x2="150"
-          y2="100"
-          className="hand hour"
-          stroke="#222"
-          strokeWidth="6"
-          strokeLinecap="round"
+          x1='100'
+          y1='100'
+          x2='150'
+          y2='100'
+          className='hand hour'
+          stroke='#222'
+          strokeWidth='6'
+          strokeLinecap='round'
           style={{ transformOrigin: '100px 100px' }}
         />
 
         {/* minute hand */}
         <line
           ref={minuteRef}
-          x1="100"
-          y1="100"
-          x2="170"
-          y2="100"
-          className="hand minute"
-          stroke="#222"
-          strokeWidth="4"
-          strokeLinecap="round"
+          x1='100'
+          y1='100'
+          x2='170'
+          y2='100'
+          className='hand minute'
+          stroke='#222'
+          strokeWidth='4'
+          strokeLinecap='round'
           style={{ transformOrigin: '100px 100px' }}
         />
 
         {/* second hand */}
         <line
           ref={secondRef}
-          x1="100"
-          y1="100"
-          x2="180"
-          y2="100"
-          className="hand second"
-          stroke="red"
-          strokeWidth="2"
-          strokeLinecap="round"
+          x1='100'
+          y1='100'
+          x2='180'
+          y2='100'
+          className='hand second'
+          stroke='red'
+          strokeWidth='2'
+          strokeLinecap='round'
           style={{ transformOrigin: '100px 100px' }}
         />
 
-        <circle cx="100" cy="100" r="5" fill="#222" />
+        <circle cx='100' cy='100' r='5' fill='#222' />
       </svg>
     </div>
   )
