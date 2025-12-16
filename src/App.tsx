@@ -1,6 +1,7 @@
 import './App.css'
 import AnalogClock from './components/AnalogClock'
 import DateWidget from './components/DateWidget'
+import QuoteGenerator from './components/QuoteGenerator'
 
 function App () {
   return (
@@ -14,9 +15,7 @@ function App () {
             <DateWidget />
           </div>
           <div className='right-bottom'>
-            <div className='placeholder'>
-              <p>Placeholder text — replace me with content.</p>
-            </div>
+            <QuoteGenerator />
           </div>
         </div>
       </div>

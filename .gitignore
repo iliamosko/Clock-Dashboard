@@ -36,3 +36,6 @@ Thumbs.db
 
 # Optional REACT_APP build files
 coverage/
+
+# api keys
+.env       <-- add this line

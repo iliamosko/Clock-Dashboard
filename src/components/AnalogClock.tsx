@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 
-const AnalogClock: React.FC<{ size?: number }> = ({ size = 300 }) => {
+const AnalogClock: React.FC<{ size?: number }> = ({ size = 450 }) => {
   const hourRef = useRef<SVGLineElement | null>(null)
   const minuteRef = useRef<SVGLineElement | null>(null)
   const secondRef = useRef<SVGLineElement | null>(null)
@@ -42,6 +42,30 @@ const AnalogClock: React.FC<{ size?: number }> = ({ size = 300 }) => {
         aria-label='Analog clock'
       >
         <circle cx='100' cy='100' r='95' className='clock-face' />
+
+        {/* second ticks (60 total) */}
+        {[...Array(60)].map((_, i) => {
+          const angleDeg = i * 6 - 90
+          const angle = (angleDeg * Math.PI) / 180
+          const isMajor = i % 5 === 0
+          const x1 = 100 + (isMajor ? 85 : 90) * Math.cos(angle)
+          const y1 = 100 + (isMajor ? 85 : 90) * Math.sin(angle)
+          const x2 = 100 + 95 * Math.cos(angle)
+          const y2 = 100 + 95 * Math.sin(angle)
+
+          return (
+            <line
+              key={`second-${i}`}
+              x1={x1}
+              y1={y1}
+              x2={x2}
+              y2={y2}
+              stroke='#222'
+              strokeWidth={isMajor ? 0 : 0.8}
+              strokeLinecap='round'
+            />
+          )
+        })}
 
         {/* ticks and numeric labels */}
         {[...Array(12)].map((_, i) => {
