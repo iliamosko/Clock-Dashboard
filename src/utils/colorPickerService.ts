@@ -9,5 +9,6 @@ export function pickColor(): string {
 export function determineTimeOfDay(): number {
   const now = new Date()
   const hours = now.getHours()
+  const minutes = now.getMinutes()
   return hours
 }
