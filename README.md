@@ -1,75 +1,42 @@
-# React + TypeScript + Vite
+# Clock Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small React + TypeScript + Vite app that displays a dashboard-style clock with a few widgets.
 
-Currently, two official plugins are available:
+What this app shows
+- **Analog clock**: main clock display (component: `AnalogClock`).
+- **Date widget**: current date information (component: `DateWidget`).
+- **Quote generator**: shows quotes from the bundled `data` sets (component: `QuoteGenerator`).
+- **Theme/color support**: color picker utilities allow theme customization (`utils/colorPickerService.ts`).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Getting started (ensure the app launches)
 
-## React Compiler
+Prerequisites:
+- Node.js (LTS recommended, e.g. >= 18)
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Steps:
 
-Note: This will impact Vite dev & build performances.
+1. Open a terminal and change to the project root (where this README.md is).
+2. Install dependencies:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3. Start the dev server (Vite):
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+4. Open the app in your browser at http://localhost:5173 (Vite default). If Vite reports a different port in the terminal, use that port instead.
+
+
+Troubleshooting
+- If the dev server does not start, confirm Node.js is installed (`node -v`).
+- If dependencies fail to install, try removing `node_modules` and `package-lock.json` then run `npm install` again.
+- If the app opens a different port, check the terminal output from `npm run dev` for the correct URL.
+
+Where to look in the code
+- Main app entry: [src/main.tsx](src/main.tsx#L1)
+- App layout and styles: [src/App.tsx](src/App.tsx#L1) and [src/App.css](src/App.css#L1)
+- Widgets: [src/components](src/components)
