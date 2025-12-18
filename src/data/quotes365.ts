@@ -49,7 +49,7 @@ export const QUOTES_365: Quote[] = [
   { text: 'Corners reward patience and precision.', category: 'racecar' },
   { text: 'Your routine is your refuge under pressure.', category: 'athlete' },
   { text: 'Listen to the silence and you will hear the scene.', category: 'actor' },
-  { text: ' hypotheses refine chaos into clarity.', category: 'scientist' },
+  { text: 'Hypotheses refine chaos into clarity.', category: 'scientist' },
   { text: 'Find the flow and protect it.', category: 'racecar' },
   { text: 'Small margins decide big moments.', category: 'athlete' },
   { text: 'The audience needs truth, not perfection.', category: 'actor' },
@@ -351,5 +351,25 @@ export const QUOTES_365: Quote[] = [
   { text: 'Act with a full heart; the audience will feel it.', category: 'actor' },
   { text: 'Good science is generous with its data.', category: 'scientist' },
   { text: 'A calm entrance sets up a confident finish.', category: 'racecar' },
-  { text: 'Train like you play and play like you trained.', category: 'athlete' }
+  { text: 'Train like you play and play like you trained.', category: 'athlete' },
+
+  { text: 'Play the scene like it matters, even when it is small.', category: 'actor' },
+  { text: 'When you are stuck, change what you measure.', category: 'scientist' },
+  { text: 'Slow down early to speed up later.', category: 'racecar' },
+  { text: 'Show up tired; consistency still counts.', category: 'athlete' },
+
+  { text: 'Confidence on stage comes from honesty off stage.', category: 'actor' },
+  { text: 'Good questions beat quick answers.', category: 'scientist' },
+  { text: 'A clean lap is built from calm decisions.', category: 'racecar' },
+  { text: 'Small effort today keeps momentum tomorrow.', category: 'athlete' },
+
+  { text: 'Listen first; the right choice will show up.', category: 'actor' },
+  { text: 'If it cannot be tested, treat it as a guess.', category: 'scientist' },
+  { text: 'Grip is temporary; judgment is permanent.', category: 'racecar' },
+  { text: 'Discipline is what you do when motivation is quiet.', category: 'athlete' },
+
+  { text: 'Make room for surprise; it is where truth hides.', category: 'actor' },
+  { text: 'Write it down now; future you will thank you.', category: 'scientist' },
+  { text: 'Respect the exit; it decides the whole corner.', category: 'racecar' },
+  { text: 'Win the next minute, then repeat.', category: 'athlete' }
 ]
