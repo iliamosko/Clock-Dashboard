@@ -16,7 +16,7 @@ function determineHourOfDay(): number {
 export function determineDimColor(): string {
   const hour = determineHourOfDay()
   if (hour >= 7 && hour < 19) {
-    return "lightyellow"
+    return "brown"
   } else {
     return "darkblue"
   }

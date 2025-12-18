@@ -9,23 +9,22 @@ function App () {
   useEffect(() => {
     let dimColor = determineDimColor()
 
-    let divRoot = document.getElementById('app-root');
+    let divRoot = document.getElementById('app-root')
 
     if (divRoot) {
-      divRoot.style.backgroundColor = dimColor;
+      divRoot.style.backgroundColor = dimColor
     }
 
     // Determine the background color every hour
     const hourInterval = setInterval(() => {
       dimColor = determineDimColor()
       if (divRoot) {
-        divRoot.style.backgroundColor = dimColor;
+        divRoot.style.backgroundColor = dimColor
       }
     }, 3600000) // 1 hour in milliseconds = 60 * 60 * 1000
 
-    return () => clearInterval(hourInterval);
+    return () => clearInterval(hourInterval)
   }, [])
-
 
   return (
     <div id='app-root'>
