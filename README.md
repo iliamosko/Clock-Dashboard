@@ -6,7 +6,6 @@ What this app shows
 - **Analog clock**: main clock display (component: `AnalogClock`).
 - **Date widget**: current date information (component: `DateWidget`).
 - **Quote generator**: shows quotes from the bundled `data` sets (component: `QuoteGenerator`).
-- **Theme/color support**: color picker utilities allow theme customization (`utils/colorPickerService.ts`).
 
 Getting started (ensure the app launches)
 
