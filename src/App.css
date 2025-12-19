@@ -5,7 +5,7 @@
   height: 100vh;
   margin: 0;
   padding: 1rem;
-  background-color: #e33;
+  background-color: rgb(161, 7, 7);
   box-sizing: border-box;
   overflow: hidden;
 }
